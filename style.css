@@ -1,0 +1,111 @@
+:root {
+    --cor-do-fundo: #0B090A;
+    --cor-do-texto: #E5383B;
+    --cor-do-btn:   #161A1D;
+    --cor-do-window: #161A1D;
+    --cor-do-input: #D3D3D3;
+}
+
+body {
+    background-color: var(--cor-do-fundo);
+    padding: 0;
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    overflow: hidden;
+}
+
+h1 {
+    color: #C4141C;
+    text-transform: uppercase;
+}
+
+input {
+    display: block;
+    width: 300px;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 10px 35px;
+    font-size: 20px;
+    border: 5px solid #14151f;
+    border: 5px solid #C4141C;
+    box-sizing: border-box;
+    background-color: var(--cor-do-input);
+}
+
+.box {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn {
+    font-family: cursive;
+    width: 300px;
+    border: none;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.box .btn.-confirmar {
+    box-shadow: 5px 5px 0 #C4141C;
+    background-color: var(--cor-do-btn);
+    color: #FFCB00;
+}
+
+.box .btn.-fechar {
+    background-color: #0E050F;
+    box-shadow: 5px 5px 0 #C4141C;
+    color: #FFCB00;
+}
+
+.box img {
+    width: 380px;
+}
+
+section {
+    background-color: var(--cor-do-window);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    color: var(--color-black-first);
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transform: scale(0);
+    transition: opacity 1s ease-in-out,
+    transform 2s cubic-bezier(0.7, 1.06, 0.55, 2.56);
+}
+
+section.active {
+    transform: scale(1) rotate(360deg);
+}
+
+h3 {
+    color: green;
+}
+
+.error {
+    color: #C4141C;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    background-color: var(--cor-do);
+}
+
+.window button {
+    margin: 0 auto;
+}

@@ -1,7 +1,7 @@
 :root {
     --cor-do-fundo: #0B090A;
     --cor-do-texto: #E5383B;
-    --cor-do-btn:   #161A1D;
+    --cor-do-btn: #161A1D;
     --cor-do-window: #161A1D;
     --cor-do-input: #D3D3D3;
 }
@@ -69,7 +69,6 @@ input {
 }
 
 section {
-    background-color: var(--cor-do-window);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,14 +77,16 @@ section {
     color: var(--color-black-first);
     width: 100vw;
     height: 100vh;
-    opacity: 1;
-    transform: scale(0);
+    opacity: 0;
+    transform: scale(0.5) translate(0%, -200%);
     transition: opacity 1s ease-in-out,
-    transform 2s cubic-bezier(0.7, 1.06, 0.55, 2.56);
+        transform 1s;
 }
 
 section.active {
-    transform: scale(1) rotate(360deg);
+    opacity: 1;
+    transform: scale(1) translate(0%, 0%);
+    z-index: 1;
 }
 
 h3 {
@@ -103,7 +104,8 @@ h3 {
     text-align: center;
     width: 600px;
     height: 300px;
-    background-color: var(--cor-do);
+    padding-top: 60px;
+    background-color: var(--cor-do-window);
 }
 
 .window button {
